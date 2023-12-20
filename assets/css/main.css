@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Bold.ttf");
+  font-weight: bold;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+.contanier {
+  margin-top: 50px !important;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  max-width: 1100px;
+  row-gap: 40px;
+  margin: 0 auto 0 auto;
+}
+.contanier .mobile-menu {
+  display: none;
+}
+.contanier .mobile-button {
+  display: none;
+}
+.contanier header {
+  grid-column: 1/-1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+}
+.contanier header .brand img {
+  height: 30px;
+}
+.contanier header .menu {
+  margin-left: auto;
+  display: flex;
+}
+.contanier header .menu div {
+  color: hsl(236, 13%, 42%);
+  cursor: pointer;
+}
+.contanier header .menu div:hover {
+  color: hsl(35, 77%, 62%);
+}
+.contanier header .menu div:not(:first-child) {
+  margin-left: 20px;
+}
+.contanier .content {
+  grid-column: 1/-1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, auto);
+  gap: 30px;
+}
+.contanier .content .top-image {
+  grid-column: 1/span 2;
+  grid-row: 1;
+}
+.contanier .content .top-image img {
+  width: 100%;
+}
+.contanier .content .title {
+  grid-column: 1/span 1;
+  grid-row: 2;
+}
+.contanier .content .title-info {
+  grid-column: 2/span 1;
+  grid-row: 2;
+}
+.contanier .content .new-titles {
+  grid-column: 3/span 1;
+  grid-row: 1/span 2;
+  padding: 20px 20px;
+  background-color: hsl(240, 100%, 5%);
+}
+.contanier .content .new-titles .nw-title {
+  color: hsl(35, 77%, 62%);
+  font-size: 35px;
+  font-weight: bold;
+}
+.contanier .content .new-titles .new-content {
+  margin-top: 30px;
+}
+.contanier .content .new-titles .new-content::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-top: 10px;
+  background-color: hsl(236, 13%, 42%);
+}
+.contanier .content .new-titles .new-content div:nth-child(1) {
+  color: hsl(36, 100%, 99%);
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.contanier .content .new-titles .new-content div:nth-child(1):hover {
+  color: hsl(35, 77%, 62%);
+}
+.contanier .content .new-titles .new-content div:nth-child(2) {
+  color: hsl(233, 8%, 79%);
+  line-height: 30px;
+}
+.contanier .content .list-area {
+  grid-column: 1/-1;
+  display: flex;
+  margin-bottom: 50px;
+}
+.contanier .content .list-area .list {
+  display: flex;
+  align-items: center;
+}
+.contanier .content .list-area .list:not(:first-child) {
+  margin-left: 20px;
+}
+.contanier .content .list-area .list .list-img img {
+  height: 130px;
+}
+.contanier .content .list-area .list .list-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-left: 20px;
+}
+.contanier .content .list-area .list .list-content .list-id {
+  font-size: 26px;
+  color: hsl(233, 8%, 79%);
+  font-weight: bold;
+}
+.contanier .content .list-area .list .list-content .list-title {
+  color: hsl(240, 100%, 5%);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contanier .content .list-area .list .list-content .list-title:hover {
+  color: hsl(5, 85%, 63%);
+}
+.contanier .content .list-area .list .list-content .list-message {
+  color: hsl(236, 13%, 42%);
+}
+.contanier .content .title {
+  font-size: 42px;
+  font-weight: bold;
+  color: hsl(240, 100%, 5%);
+}
+.contanier .content .title-info .info {
+  color: hsl(236, 13%, 42%);
+  font-size: 16px;
+  line-height: 25px;
+}
+.contanier .content .title-info .btn button {
+  margin-top: 30px;
+  width: 170px;
+  height: 40px;
+  background-color: hsl(5, 85%, 63%);
+  border: 0;
+  letter-spacing: 5px;
+  color: hsl(36, 100%, 99%);
+  cursor: pointer;
+}
+.contanier .content .title-info .btn button:hover {
+  background-color: hsl(240, 100%, 5%);
+}
+
+@media (max-width: 900px) {
+  .contanier {
+    padding: 0 10px 0 10px;
+    margin-top: 30px !important;
+  }
+  .contanier .title-info .btn button {
+    width: 100%;
+  }
+  .contanier .mobile-menu {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    height: 100vh;
+    right: -100%;
+    top: 0;
+    opacity: 0;
+    width: 70%;
+    background-color: hsl(36, 100%, 99%);
+    transition: 600ms all;
+  }
+  .contanier .mobile-menu .mobile-close-button img {
+    position: absolute;
+    right: 25px;
+    top: 30px;
+  }
+  .contanier .mobile-menu .mobile-menu-list {
+    margin: 45% 0 0 30px;
+  }
+  .contanier .mobile-menu .mobile-menu-list div {
+    margin-top: 30px;
+  }
+  .contanier .mobile-menu .mobile-menu-list div a {
+    font-size: 20px;
+    color: hsl(240, 100%, 5%);
+    text-decoration: none;
+  }
+  .contanier header {
+    overflow: hidden;
+  }
+  .contanier header .menu {
+    display: none;
+  }
+  .contanier header .mobile-button {
+    margin-left: auto;
+    display: block;
+  }
+  .contanier header .mobile-button img {
+    cursor: pointer;
+  }
+  .contanier .content {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+  }
+  .contanier .content .top-image {
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
+  .contanier .content .title {
+    grid-column: 1/-1;
+    grid-row: 2;
+    font-size: 38px;
+    width: 100%;
+  }
+  .contanier .content .title-info {
+    grid-column: 1/-1;
+    grid-row: 3;
+  }
+  .contanier .content .new-titles {
+    grid-column: 1/-1;
+    grid-row: 4;
+  }
+  .contanier .content .list-area {
+    grid-column: 1/-1;
+    grid-row: 5;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .contanier .content .list-area .list {
+    margin-left: 0 !important;
+  }
+}/*# sourceMappingURL=main.css.map */
