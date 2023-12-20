@@ -5,7 +5,7 @@
 - The template has responsive design for mobile devices(created for 900px width)
 
 <br>
-# Pages 
+Pages 
 <br>
 Dekstop : 
 <br>
