@@ -8,6 +8,8 @@
 Pages 
 <br>
 Dekstop : 
+<br>
+![dekstop](https://github.com/alihogl/News-Homepage/assets/153857097/17a9b62c-2dc4-4fbb-8a70-a46466ebb570)
 
 
 
